@@ -1,1 +1,27 @@
 
+(function (env) {
+    "use strict";
+    env.ddg_spice_pirate_speak = function(api_result){
+
+        if (api_result.error) {
+            return Spice.failed('pirate_speak');
+        }
+
+        Spice.add({
+            id: "pirate_speak",
+            name: "Pirate Speak",
+            data: api_result,
+            meta: {
+                sourceName: "npmjs.org",
+                sourceUrl: 'http://npmjs.org/package/' + api_result.name
+            },
+            templates: {
+                group: 'base',
+                options:{
+                    content: Spice.npm.content,
+                    moreAt: true
+                }
+            }
+        });
+    };
+}(this));
