@@ -12,8 +12,8 @@
             name: "Pirate Speak",
             data: api_result,
             meta: {
-                sourceName: "npmjs.org",
-                sourceUrl: 'http://npmjs.org/package/' + api_result.name
+                sourceName: "isithackday.com/arrpi.php",
+                sourceUrl: 'isithackday.com/arrpi.php'
             },
             templates: {
                 group: 'base',
